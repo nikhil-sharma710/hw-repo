@@ -1,2 +1,5 @@
 Homework 02
 
+In order to properly run this program, you must run generate_sites.py, which creates a dictionary called "sites" that contains a list of dictionaries. Each sub-dictionary contains a site ID from 1 to 5, a latitude value from 16 to 18, a longitude value from 82 to 84, and a composition, which could be either stony, iron, or stony-iron. The dictionary is then uploaded to create a JSON file, sites.json, which contains all the data from the program.
+
+Next, run calculate_trip, which calculates the travel time, the sample time, and the total time of the trip. To calculate the distance, the great-circle distance algorithm is used. Each leg is summed up to find the total distance, and that value is divided by 10 km/h to find the travel time. The sample time is based on the composition of the site, lasting 1, 2, or 3 hours depending on if the composition is stony, iron, or stony-iron, respectfully. The times are summed to get the total sample time. Lastly, the times are added to get the total time.
