@@ -2,11 +2,18 @@ import json
 import logging
 import math
 
-logging.basicConfig(level = logging.INFO)
+logging.basicConfig(level = logging.INFO, format = '%(levelname)s: %(message)s')
 
 def calculate_turbidity(a0: float, I90: float) -> float:
     """
+    This function calculates the turbidity of water, using the equation T = a0*I90.
 
+    Args:
+        a0 (float): The first is the calibration constant.
+        I90 (float): The second argument is the 90 degree detector current.
+
+    Returns:
+        T (float): The function returns the turbidity of water.
     """
 
     T = a0*I90
@@ -14,7 +21,15 @@ def calculate_turbidity(a0: float, I90: float) -> float:
 
 def calculate_minimum_time(Ts: float, T0: float, d: float) -> float:
     """
+    This function calculates the minimum time to fall below threshold turbidity, using the inequality Ts > T0(1 - d)^b.
+    
+    Args:
+        Ts (float): The first argument is the turbidity threshold for safe water.
+        T0 (float): The second argument is the current turbidity.
+        d (float): The third argument is the decay factor per hour, expressed as a decimal.
 
+    Returns:
+        b (float): The function returns the minimum time to fall below threshold turbidity.
     """
 
     b = math.log(Ts/T0, 1 - d)
