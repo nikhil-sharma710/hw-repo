@@ -3,7 +3,7 @@
 The objective of this project is to check the latest water quality data to assess whether it is safe to analyze samples. Two scripts are found within:
 
 * `analyze_water.py`: used to calculate the turbidity of water and to notify the user if the turbidity is below the threshold. If it is not, the program calculates the minimum time to fall below threshold turbidity.
-* `test_analyze_water.py`: used to run five tests using methods from `analyze_water.py`.
+* `test_analyze_water.py`: used to run five tests, checking methods from `analyze_water.py`.
 
 ### Running Instructions
 
