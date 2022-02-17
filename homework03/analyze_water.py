@@ -77,7 +77,10 @@ def main():
     with open('turbidity_data.json', 'r') as f:
         turbidity_data = json.load(f)
     
-    print('Average turbidity based on most recent five measurements = ' + average_values(most_recent) + ' NTU')
+    most_recent = create_new_list(turbidity_data)
+    average_turbidity = average_values(most_recent)
+
+    print('Average turbidity based on most recent five measurements = ' + str(average_turbidity) + ' NTU')
 
     threshold = 1.0
     decay_factor = 0.02
