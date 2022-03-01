@@ -33,4 +33,14 @@ Use the command above to build the Docker image using the Dockerfile.
 $ ./ml_data_analysis.py Meteorite_Landings.json
 ```
 
-After the turbidity, the logging message, and the minimum time are printed, run `test_analyze_water.py`. It runs five unit tests with `pytest` to ensure the math is correct in the functions, the argument types are valud, and the return types are valid. The first test sees if the output of the `calculate_turbidity` function is mathematically accurate, using sample data. The second test checks if `calculate_turbidity` returns a float. The third test sees if the output of `calculate_minimum_time` is mathematically accurate, using sample data. The fourth test sees if `calculate_minimum_time` returns a float. The final test catches a TypeError as the input for the function should be three floats, and the first argument of the test is a string. If nothing is printed, then all five tests passed.
+Use the command above to run the program `ml_data_analysis.py` using the data fromm `Meteorite_Landings.json`. The program will summarize the findings from each of the sites listed in the data, including the average mass of each meteorite, the amount of meteorites that land in each quadrant (Northeastern, Northwestern, Southeastern, Southwestern), and the amount of each class of meteorites that occurs. If you'd like to download your own data, such as the sample data `ML_Data_Sample.json`, use the following command:
+
+```
+$ wget https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json
+```
+
+This will add the JSON file `ML_Data_Sample.json` to the repository. To run `ml_data_analysis.py` with the new data, replace `Meteorite_Landings.json` with `ML_Data_Sample.json` as so:
+
+```
+$ ./ml_data_analysis.py ML_Data_Sample.json
+```
