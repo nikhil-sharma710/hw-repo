@@ -29,9 +29,27 @@ Use the command above to build the Docker image using the Dockerfile.
 
 #### Step 3:
 
-```
-$ ./ml_data_analysis.py Meteorite_Landings.json
-```
+.. code-block:: console
+
+   [isp02]$ ./ml_data_analysis Meteorite_Landings.json
+   Summary data following meteorite analysis:
+
+   Average mass of 30 meteor(s):
+   83857.3 grams
+
+   Hemisphere summary data:
+   There were 21 meteors found in the Northern & Eastern quadrant
+   There were 6 meteors found in the Northern & Western quadrant
+   There were 0 meteors found in the Southern & Eastern quadrant
+   There were 3 meteors found in the Southern & Western quadrant
+
+   Class summary data:
+   The L5 class was found 1 times
+   The H6 class was found 1 times
+   The EH4 class was found 2 times
+   The Acapulcoite class was found 1 times
+   The L6 class was found 6 times
+   ... etc
 
 Use the command above to run the program `ml_data_analysis.py` using the data fromm `Meteorite_Landings.json`. The program will summarize the findings from each of the sites listed in the data, including the average mass of each meteorite, the amount of meteorites that land in each quadrant (Northeastern, Northwestern, Southeastern, Southwestern), and the amount of each class of meteorites that occurs. If you'd like to download your own data, such as the sample data `ML_Data_Sample.json`, use the following command:
 
