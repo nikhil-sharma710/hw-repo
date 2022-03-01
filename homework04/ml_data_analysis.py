@@ -88,7 +88,7 @@ def main():
     print()
 
     print("Average mass of 30 meteor(s):")
-    print(compute_average_mass(ml_data['meteorite_landings'], 'mass (g)'))
+    print(str(compute_average_mass(ml_data['meteorite_landings'], 'mass (g)')) + ' grams')
 
     print()
     print('Hemisphere summary data:')
