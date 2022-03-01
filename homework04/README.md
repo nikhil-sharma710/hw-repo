@@ -44,3 +44,32 @@ This will add the JSON file `ML_Data_Sample.json` to the repository. To run `ml_
 ```
 $ ./ml_data_analysis.py ML_Data_Sample.json
 ```
+
+If you would like to use your own data, it would have to be in the following format as a JSON file:
+
+{
+  "meteorite_landings": [
+    {
+      "name": "",
+      "id": "",
+      "recclass": "",
+      "mass (g)": "",
+      "reclat": "",
+      "reclong": "",
+      "GeoLocation": ""
+    },
+    {
+      "name": "",
+      "id": "",
+      "recclass": "",
+      "mass (g)": "",
+      "reclat": "",
+      "reclong": "",
+      "GeoLocation": ""
+    },
+    ...
+  ]
+  
+}
+    
+
