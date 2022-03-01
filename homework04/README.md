@@ -72,4 +72,10 @@ If you would like to use your own data, it would have to be in the following for
   
 }
     
+#### Step 4:
 
+```
+$ python3 test_ml_data_analysis.py
+```
+
+Use the command above to run the containerized suite with pytest. It runs five tests for each of the methods in `ml_data_analysis.py` while using sample data. There should be no output as the code is error-free.
