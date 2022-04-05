@@ -8,13 +8,14 @@ rd = redis.Redis(host='172.17.0.23', port=6379, db=0)
 @app.route('/data', methods=['GET', 'POST'])
 def data():
     """
-    This function reads a JSON file and converts it into dictionary.
+    If the request method is POST, this function reads a JSON file and converts it into dictionary. If the request method is GET, the function returns a JSON list of the meteorite landing data.
     
     Args:
         None
     
     Returns:
-        None
+        If request.method == 'POST', the function returns a string stating the data was loaded from the file.
+        If request.method =- 'GET', the function returns a JSON list of meteorite landing data.
     """
 
     ml_data = {}
