@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nsharma-redis-deployment
+  labels:
+    username: nsharma
+    env: test
+    app: nsharma-test-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nsharma-test-redis
+  template:
+    metadata:
+      labels:
+        app: nsharma-test-redis
+    spec:
+      containers:
+        - name: nsharma-test-redis
+          image: redis:6
+          ports:
+          - name: http
+            containerPort: 6379
+          volumeMounts:
+            - name: nsharma-data
+              mountPath: "/data"
+      volumes:
+      - name: nsharma-data
+        persistentVolumeClaim:
+          claimName: nsharma-data

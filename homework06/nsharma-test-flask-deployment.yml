@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nsharma-flask-deployment
+  labels:
+    username: nsharma
+    env: test
+    app: nsharma-test-flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nsharma-test-flask
+  template:
+    metadata:
+      labels:
+        app: nsharma-test-flask
+    spec:
+      containers:
+        - name: nsharma-test-flask
+          imagePullPolicy: Always
+          image: nikhilsharma710/hw05:1.0
+          command: ['python3', 'app.py']
+          ports:
+          - name: http
+            containerPort: 5000
+          env:
+          - name: REDIS_IP
+            value: 10.96.56.194 
