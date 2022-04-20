@@ -1,9 +1,11 @@
 from flask import Flask, request
 import json
 import redis
+import os
 
+redis_ip = os.environ.get('REDIS_IP')
 app = Flask(__name__)
-rd = redis.Redis(host='10.96.56.194', port=6379, db=0)
+rd = redis.Redis(host=redis_ip, port=6379, db=0)
 
 @app.route('/data', methods=['GET', 'POST'])
 def data():
