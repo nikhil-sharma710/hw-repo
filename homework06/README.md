@@ -58,7 +58,7 @@ Use the command below to enter the debug pod. This is where you will be able to 
 $ kubectl exec -it <debug pod ID> -- /bin/bash
 ```
 
-#### Step 6: Use Flask Applicaton
+#### Step 6: Run Applicaton
 
 ```
 $ curl -X POST <Flask IP address>:5000/data
