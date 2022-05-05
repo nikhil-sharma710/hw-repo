@@ -25,7 +25,7 @@ $ python3 analyze_water.py
 
 After downloading the JSON file, run the script `analyze_water.py`. It imports `turbidity_data.json` and takes the five most recent readings to calculate the average turbidity of them. If the turbidity is below the threshold of 1.0 NTU, an informational message is printed stating the water is safe for use. If the turbidity is above the threshold, a warning message is printed stating that a certain time must elapse before the water is safe for use. The minimum time is then calculated using a formula, and if the water is safe, the result is 0 hours.
 
-#### Step 3: Run Test Program
+#### Step 3: Run Unit Testing Program
 
 ```
 $ python3 test_analyze_water.py
