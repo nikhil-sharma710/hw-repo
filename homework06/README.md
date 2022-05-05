@@ -1,6 +1,6 @@
-## Homework 06: Into the Kubernetes-Verse
+## Homework 06: Deploying a Test Environment in Kubernetes
 
-The objective of this project was to use Kubernetes to deploy a test environment that can interact with the Flask application from Homework 05, which uses a Redis database to load and retrieve data. Seven scripts are found in this repository:
+The objective of this project was to use Kubernetes to deploy a test environment that can interact with the Flask application from Homework 05, which uses a Redis database to load and retrieve data. Seven scripts are found in this folder:
 
 * `app.py`: A Flask application that parses ISS positional and sighting data to return information about epochs, countries, regions, and cities through routes.
 * `Dockerfile`: text file that contains all commands to build the image.
