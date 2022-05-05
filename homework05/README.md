@@ -18,6 +18,16 @@ Use the following commands to retrieve `ML_Data_Sample.json` from the web. The J
 $ wget https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json
 ```
 
+The file is a JSON file that contains a dictionary with the key `meteorite_landings` that contains a list of dictionaries. Each dictionary contains seven keys and corresponding values. The keys are:
+
+* `name`: the name of the meteorite
+* `id`: the numerical ID of the meteorite
+* `recclass`: the classification of the meteorite
+* `mass (g)`: the mass of the meteorite, in grams
+* `reclat`: the latitude of the location of the meteorite
+* `reclong`: the longitude of the location of the meteorite
+* `GeoLocation`: combines quanities in `reclat` and `reclong` into coordinate form
+
 #### Step 2: Pull or Build Docker Image
 
 ```
