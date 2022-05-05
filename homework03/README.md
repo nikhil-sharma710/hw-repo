@@ -1,6 +1,6 @@
-## Homework 03: A Space Turbidity
+## Homework 03: Implementing Good Practices for Programming
 
-The objective of this project is to check the latest water quality data to assess whether it is safe to analyze samples. Two scripts are found within:
+The objective of this project is to check the latest water quality data to assess whether it is safe to analyze samples. It implements the concepts of doc strings, code organization, unit testing, and logging messages. Two scripts are found in this folder:
 
 * `analyze_water.py`: used to calculate the turbidity of water and to notify the user if the turbidity is below the threshold. If it is not, the program calculates the minimum time to fall below threshold turbidity.
 * `test_analyze_water.py`: used to run five tests, checking methods from `analyze_water.py`.
