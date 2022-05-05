@@ -1,4 +1,4 @@
-## Homework 04: Once Upon a Time in Containers
+## Homework 04: Packaging Code into a Container using Docker
 
 The objective of this project is to package the contents of a repository into a container using Docker commands. Five scripts are found within:
 
@@ -11,7 +11,7 @@ The objective of this project is to package the contents of a repository into a 
 
 The code must be run sequentially as follows.
 
-#### Step 1:
+#### Step 1: Pull Image from Docker
 
 ```
 $ docker pull nikhilsharma710/ml_data_analysis:hw04
@@ -19,7 +19,7 @@ $ docker pull nikhilsharma710/ml_data_analysis:hw04
 
 Use the command above to pull and use the existing image on Docker Hub. The image is called `ml_data_analysis` and the tag is `hw04`.
 
-#### Step 2:
+#### Step 2: Build Docker Image
 
 ```
 $ docker build -t nikhilsharma710/ml_data_analysis:hw04 .
@@ -27,7 +27,7 @@ $ docker build -t nikhilsharma710/ml_data_analysis:hw04 .
 
 Use the command above to build the Docker image using the Dockerfile.
 
-#### Step 3:
+#### Step 3: Run Program
 
 ```
 $ ./ml_data_analysis.py Meteorite_Landings.json
@@ -72,7 +72,7 @@ If you would like to use your own data, it would have to be in the following for
   
 }
     
-#### Step 4:
+#### Step 4: Run Unit Testing Program
 
 ```
 $ python3 test_ml_data_analysis.py
