@@ -1,4 +1,4 @@
-## Homework 05: Back to the Flask
+## Homework 05: Using Redis and Flask Together
 
 The objective of this project is to write and containerize a Flask application for that utilizes Redis. Two scripts are found in this repository:
 
